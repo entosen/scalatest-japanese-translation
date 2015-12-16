@@ -572,6 +572,8 @@ HTML reporter は、markup の情報を HTML に整形します。
 
 <a name="notifiersAlerters"></a><h2>Notifiers and alerters</h2>
 
+## Notifiers and alerters
+
 <p>
 ScalaTest records text passed to <code>info</code> and <code>markup</code> during tests, and sends the recorded text in the <code>recordedEvents</code> field of 
 test completion events like <code>TestSucceeded</code> and <code>TestFailed</code>. This allows string reporters (like the standard out reporter) to show
@@ -581,10 +583,24 @@ and <code>markup</code> text in green. While this approach helps the readability
 updates from long running tests.
 </p>
 
+ScalaTest は、`info` と `markup` によって渡されたテキストを、
+テスト完了イベント( `TestSucceeded` や `TestFailed` )の 
+`recordedEvents` フィールドに渡します。
+これは、(標準出力レポーターなどの)文字列レポーターによって、
+テスト名の *後* に、テスト結果によって決まる色付きのテキストとして表示されます。
+例えば、テストが失敗した場合赤色で、成功した場合は緑色で表示されます。
+これはレポートの可読性を挙げますが、
+一方、時間がかかるテストの状況を確認するのには使えないことを意味します。
+
 <p>
 To get immediate (<em>i.e.</em>, non-recorded) notifications from tests, you can use <code>note</code> (a <a href="Notifier.html"><code>Notifier</code></a>) and <code>alert</code>
 (an <a href="Alerter.html"><code>Alerter</code></a>). Here's an example showing the differences:
 </p>
+
+テストから即時の( *すなわち* 記録されない) 通知を得るために、
+`note` と `alert` を使うことができます。
+([Notifier](http://doc.scalatest.org/2.2.4/org/scalatest/Notifier.html)
+以下に、例を使って違いを示します。
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec.note
@@ -615,6 +631,13 @@ be unrelated to the ultimate outcome of the test: <code>note</code> text will al
 Here's an example:
 </p>
 
+`note` と `alert` 情報は、即時に送られるため、
+それらは文字列レポーターの出力するテスト名 *より前に* 現れ、
+その色はテストが成功したかどうかに依りません:
+`note` のテキストは緑色で表示され、
+`alert` のテキストは黄色で表示されます。
+以下に例示します:
+
 <pre class="stREPL">
 scala&gt; new SetSpec execute
 <span class="stGreen">SetSpec:
@@ -632,6 +655,13 @@ In summary, use <code>info</code> and <code>markup</code> for text that should f
 readable, printable specification, <code>info</code> and <code>markup</code> text will appear in the HTML report, but
 <code>note</code> and <code>alert</code> text will not.)
 </p>
+
+まとめると、
+仕様についての記述を出力したい場合には、`info` と `markup` を使って、
+状態についての通知をする場合には、`note` と `alert` を使いましょう。
+(HTMLレポーターは、読みやすい印刷可能な仕様を生成する意図があるので、
+`info` と `markup` のテキストは出力されますが、
+`note` と `alert` のテキストは出力されません。
 
 <a name="pendingTests"></a><h2>Pending tests</h2>
 

@@ -14,9 +14,13 @@
  * limitations under the License.
  */
 
+<p>
 Facilitates a &ldquo;behavior-driven&rdquo; style of development (BDD), in which tests
 are combined with text that specifies the behavior the tests verify.
 </p>
+
+これは、振る舞い駆動型の開発(BDD)を容易にします。
+この仕組の中では、各テストは、妥当な振る舞いを記述したテキストと結合されます。
 
 <table><tr><td class="usage">
 <strong>Recommended Usage</strong>:
@@ -24,11 +28,21 @@ Class <code>FlatSpec</code> is a good first step for teams wishing to move from 
 but the test names must be written in a specification style: &ldquo;X should Y,&rdquo; &ldquo;A must B,&rdquo; <em>etc.  </em>
 </td></tr></table>
 
+## 推奨される使用方法
+
+`FlatSpec` クラスは、xUnit から BDD に移行しようとしているチームにとって、よい最初の１歩です。
+なぜなら、その構造は xUnit のようにフラットで、シンプルで取っ付き易いです。
+一方、テスト名は 'X should Y' や 'A must B' *など* 記述的な形を強制します。
+
 <p>
 Trait <code>FlatSpec</code> is so named because
 your specification text and tests line up flat against the left-side indentation level, with no nesting needed.
 Here's an example <code>FlatSpec</code>:
 </p>
+
+記述のテキストやテストは、ネスト不要で、左側のあるインデントレベルに沿って一列にフラットに並びます。
+これが `FlatSpec` という名前の由来です。
+以下に `FlatSpec` の使用例を挙げます :
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec
@@ -56,10 +70,15 @@ Note: you can use <code>must</code> or <code>can</code> as well as <code>should<
 <code>it should "pop</code>..., you could write <code>it must "pop</code>... or <code>it can "pop</code>....
 </p>
 
+Note: `FlatSpec`では、`should` 以外にも、`must` や `can` を使うことができます。
+例えば、`it should "pop..."` の代わりに、`it mult "pop..."` や `it can "pop..."` と書くことができます。
+
 <p>
 Instead of using a <code>behavior of</code> clause, you can alternatively use a shorthand syntax in which you replace
 the first <code>it</code> with the subject string, like this:
 </p>
+
+`behavior of` 節を使う代わりに、次のように、最初の `it` の部分に "subject 文字列"を書く簡略表記を使うことができます：
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec
@@ -84,6 +103,9 @@ class SetSpec extends FlatSpec {
 Running either of the two previous three versions of <code>SetSpec</code> in the Scala interpreter would yield:
 </p>
 
+前述の2つの例の `SetSpec` を Scala インタプリタで実行すると、
+どちらも以下の結果を得ます。
+
 <pre class="stREPL">
 <span class="stGreen">An empty Set
 - should have size 0
@@ -101,6 +123,16 @@ Each <code>it</code> refers to the most recently declared subject. For example, 
 a stack that contains one item:
 </p>
 
+`FlatSpec` の中では、記述とテストをしたいいくつかの小さな振る舞いそれぞれについて、
+1つ(もしくはそれ以上の) 文章形式の記述を書きます。
+それぞれの記述文章は "Subject" (もしくは *system under test* や SUT と呼ばれます) を持ちます。
+subject は各テストで記述およびテストをされる実体を表し、また、記述文の主語でもあります。
+しばしば、同じ subject に対して複数のテストを書きたくなるでしょう。
+`FlatSpec` では、Subject は `behavior of` 節か簡略表記で一度だけ名付ければよく、
+その後は `it should/must/can "do something"` のように書きます。
+それぞれの `it` は直前に宣言された subject を指します。
+例えば、以下のコードの4つのテストは、全て "A Stack (with one item)" についてのテストということです：
+
 <pre class="stHighlight">
 behavior of "A Stack (with one item)"
 
@@ -117,6 +149,8 @@ it should "remove the top item on pop" in {}
 The same is true if the tests are written using the shorthand notation:
 </p>
 
+テストが簡略表記で書かれていても同様です：
+
 <pre class="stHighlight">
 "A Stack (with one item)" should "be non-empty" in {}
 
@@ -132,9 +166,14 @@ In a <code>FlatSpec</code>, therefore, to figure out what "<code>it</code>" mean
 recent use of <code>behavior of</code> or the shorthand notation.
 </p>
 
+これゆえ、`FlatSpec` では、`it` が何を指しているかは、`behavior of` か簡略表記が出てくるまで、
+上方向にスキャンするだけでよいということです。
+
 <p>
 Because sometimes the subject could be plural, you can alternatively use <code>they</code> instead of <code>it</code>:
 </p>
+
+場合によっては、subject が複数形になることもあるので、`it` の代わりに `they` を使うこともできます。
 
 <pre class="stHighlight">
 "The combinators" should "be easy to learn" in {}
@@ -150,6 +189,10 @@ A <code>FlatSpec</code>'s lifecycle has two phases: the <em>registration</em> ph
 <code>run</code> is called on it. It then remains in ready phase for the remainder of its lifetime.
 </p>
 
+`FlatSpec`のライフサイクルは、登録フェーズと準備完了フェーズの２つのフェーズからなっています。
+まず登録フェーズから始まり、最初に `run` が呼ばれたタイミングで準備完了フェーズに移行します。
+その後はずっと準備完了フェーズのままです。
+
 <p>
 Tests can only be registered while the <code>FlatSpec</code> is
 in its registration phase. Any attempt to register a test after the <code>FlatSpec</code> has
@@ -159,6 +202,20 @@ of using <code>FlatSpec</code> is to register tests during object construction a
 the examples shown here. If you keep to the recommended style, you should never see a
 <code>TestRegistrationClosedException</code>.
 </p>
+
+テストの登録は `FlatSpec` が登録フェーズにいる間しかできない。
+FlatSpecが準備完了フェーズに入ったら、つまり、`run` が呼ばれた後は、
+テストを登録しようとすると
+[`TestRegistrationClosedException`](http://doc.scalatest.org/2.2.4/org/scalatest/exceptions/TestRegistrationClosedException.html)
+が発生する。
+`FlatSpec` を使う上での推奨されるスタイルは、
+ここに示されている例で行っているように、
+object constraction の間にテストの登録を済ませてしまうことだ。
+そうすれば、`TestRegistrationClosedException` に遭遇することはない。
+
+(訳注)
+テストの登録とは、 `it should "...." in { ... }` のような記述のことで、
+これをやるのは FlatTest を継承したクラスのコンストラクタ部分がいいよってこと。
 
 <a name="ignoredTests"></a><h2>Ignored tests</h2></a>
 

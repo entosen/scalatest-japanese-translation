@@ -16,6 +16,12 @@
  */
 ```
 
+(訳注) この文書は、以下の文書を翻訳したものです
+
+- https://github.com/scalatest/scalatest/blob/master/scalatest/src/main/scala/org/scalatest/FlatSpec.scala
+- https://github.com/scalatest/scalatest/commit/ecddd6606a569e166e0ecebc9ec27b3c2910b081
+ 
+
 <p>
 Facilitates a &ldquo;behavior-driven&rdquo; style of development (BDD), in which tests
 are combined with text that specifies the behavior the tests verify.

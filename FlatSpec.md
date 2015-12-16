@@ -1,3 +1,4 @@
+```
 /*
  * Copyright 2001-2013 Artima, Inc.
  *
@@ -13,6 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+```
 
 <p>
 Facilitates a &ldquo;behavior-driven&rdquo; style of development (BDD), in which tests
@@ -25,14 +27,12 @@ are combined with text that specifies the behavior the tests verify.
 <table><tr><td class="usage">
 <strong>Recommended Usage</strong>:
 Class <code>FlatSpec</code> is a good first step for teams wishing to move from xUnit to BDD, because its structure is flat like xUnit, so simple and familiar, 
-but the test names must be written in a specification style: &ldquo;X should Y,&rdquo; &ldquo;A must B,&rdquo; <em>etc.  </em>
-</td></tr></table>
-
-## 推奨される使用方法
-
-`FlatSpec` クラスは、xUnit から BDD に移行しようとしているチームにとって、よい最初の１歩です。
+but the test names must be written in a specification style: &ldquo;X should Y,&rdquo; &ldquo;A must B,&rdquo; <em>etc.  </em><br>
+<strong>推奨される使用方法</strong>:
+<code>FlatSpec</code> クラスは、xUnit から BDD に移行しようとしているチームにとって、よい最初の１歩です。
 なぜなら、その構造は xUnit のようにフラットで、シンプルで取っ付き易いです。
 一方、テスト名は 'X should Y' や 'A must B' *など* 記述的な形を強制します。
+</td></tr></table>
 
 <p>
 Trait <code>FlatSpec</code> is so named because
@@ -104,7 +104,7 @@ Running either of the two previous three versions of <code>SetSpec</code> in the
 </p>
 
 前述の2つの例の `SetSpec` を Scala インタプリタで実行すると、
-どちらも以下の結果を得ます。
+どちらも以下の結果を得ます:
 
 <pre class="stREPL">
 <span class="stGreen">An empty Set
@@ -206,7 +206,7 @@ the examples shown here. If you keep to the recommended style, you should never 
 テストの登録は `FlatSpec` が登録フェーズにいる間しかできません。
 FlatSpecが準備完了フェーズに入ったら、つまり、`run` が呼ばれた後は、
 テストを登録しようとすると
-[`TestRegistrationClosedException`](http://doc.scalatest.org/2.2.4/org/scalatest/exceptions/TestRegistrationClosedException.html)
+[TestRegistrationClosedException](http://doc.scalatest.org/2.2.4/org/scalatest/exceptions/TestRegistrationClosedException.html)
 が発生します。
 `FlatSpec` を使う上での推奨されるスタイルは、
 ここに示されている例で行っているように、
@@ -217,7 +217,7 @@ object constraction の間にテストの登録を済ませてしまうことで
 テストの登録とは、 `it should "...." in { ... }` のような記述のことで、
 これをやるのは FlatTest を継承したクラスのコンストラクタ部分がいいよってこと。
 
-<a name="ignoredTests"></a><h2>Ignored tests</h2></a>
+<a name="ignoredTests"><h2>Ignored tests</h2>
 
 ## あるテストを無視する
 
@@ -391,10 +391,10 @@ ScalaTestから見つからないようにすることとは違います。
 無視クラスは見つけられ実行されますが、そのテストは全て無視としてレポートされます。
 これは無視クラスを見えるようにしておき、開発者にそれを修正し無視しなくてよくするように促します。
 もし、クラスが完全に見つからないようにするには、
-代わりに [`DoNotDiscover`](http://doc.scalatest.org/2.2.4/org/scalatest/DoNotDiscover.html) 
+代わりに [DoNotDiscover](http://doc.scalatest.org/2.2.4/org/scalatest/DoNotDiscover.html) 
 アノテーションを使ってください。
 
-<a name="informers"></a><h2>Informers</h2></a>
+<a name="informers"></a><h2>Informers</h2>
 
 <p>
 One of the parameters to <code>FlatSpec</code>'s <code>run</code> method is a <a href="Reporter.html"><code>Reporter</code></a>, which
@@ -457,7 +457,7 @@ A mutable Set
   + That's all folks! </span>
 </pre>
 
-<a name="documenters"></a><h2>Documenters</h2></a>
+<a name="documenters"></a><h2>Documenters</h2>
 
 <p>
 <code>FlatSpec</code> also provides a <code>markup</code> method that returns a <a href="Documenter.html"><code>Documenter</code></a>, which allows you to send
@@ -530,7 +530,7 @@ add nicely formatted text to HTML reports. Here's what the above <code>SetSpec</
 
 <img class="stScreenShot" src="../../lib/flatSpec.gif">
 
-<a name="notifiersAlerters"></a><h2>Notifiers and alerters</h2></a>
+<a name="notifiersAlerters"></a><h2>Notifiers and alerters</h2>
 
 <p>
 ScalaTest records text passed to <code>info</code> and <code>markup</code> during tests, and sends the recorded text in the <code>recordedEvents</code> field of 
@@ -593,7 +593,7 @@ readable, printable specification, <code>info</code> and <code>markup</code> tex
 <code>note</code> and <code>alert</code> text will not.)
 </p>
 
-<a name="pendingTests"></a><h2>Pending tests</h2></a>
+<a name="pendingTests"></a><h2>Pending tests</h2>
 
 <p>
 A <em>pending test</em> is one that has been given a name but is not yet implemented. The purpose of

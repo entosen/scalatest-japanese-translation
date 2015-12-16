@@ -492,11 +492,18 @@ You can pass the extra information to the <code>Documenter</code> via its <code>
 The <code>Documenter</code> will then pass the information to the <code>Reporter</code> via an <a href="events/MarkupProvided.html"><code>MarkupProvided</code></a> event.
 </p>
 
-
+また、`FlatSpec` は [Documenter](http://doc.scalatest.org/2.2.4/org/scalatest/Documenter.html)
+を返す `markup` メソッドを提供しており、
+それは、`Reporter` に [Markdown syntax](http://daringfireball.net/projects/markdown/) で
+整形されたテキストを渡すことを可能にしています。
+`Documenter` は `Reporter` に [MarkupProvided](http://doc.scalatest.org/2.2.4/org/scalatest/events/MarkupProvided.html)
+イベント経由で情報を渡します。
 
 <p>
 Here's an example <code>FlatSpec</code> that uses <code>markup</code>:
 </p>
+
+ここに `markup` を使った `FlatSpec` の例を挙げます:
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec.markup
@@ -555,6 +562,11 @@ Although all of ScalaTest's built-in reporters will display the markup text in s
 the HTML reporter will format the markup information into HTML. Thus, the main purpose of <code>markup</code> is to
 add nicely formatted text to HTML reports. Here's what the above <code>SetSpec</code> would look like in the HTML reporter:
 </p>
+
+ScalaTest のビルトインの Reporter はどれも、なんらか形式でマークアップテキストを表示しますが、
+HTML reporter は、markup の情報を HTML に整形します。
+これゆえ、`markup` の主目的は、きれいに整形されたテキストをHTMLレポートに追加することです。
+以下に、上の `SetSpec` が HTMLレポートでどのように見えるかを示します:
 
 <img class="stScreenShot" src="../../lib/flatSpec.gif">
 

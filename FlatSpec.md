@@ -396,6 +396,8 @@ ScalaTestから見つからないようにすることとは違います。
 
 <a name="informers"></a><h2>Informers</h2>
 
+## Informers 
+
 <p>
 One of the parameters to <code>FlatSpec</code>'s <code>run</code> method is a <a href="Reporter.html"><code>Reporter</code></a>, which
 will collect and report information about the running suite of tests.
@@ -409,11 +411,31 @@ You can pass the extra information to the <code>Informer</code> via its <code>ap
 The <code>Informer</code> will then pass the information to the <code>Reporter</code> via an <a href="events/InfoProvided.html"><code>InfoProvided</code></a> event.
 </p>
 
+`FlatSpec` の `run` メソッドの引数の1つは 
+[Reporter](http://doc.scalatest.org/2.2.4/org/scalatest/Reporter.html) であり、
+これは実行しているテストスイートについての情報を集めてレポートするものです。
+スイートが実行されると、
+実行しているスイートとテストについての情報、テストが成功したか失敗したか、
+無視されたテストなどの情報が `Reporter` に渡ります。
+ほとんどの場合、 `FlatSpec` のメソッドによるデフォルトのレポートで十分足りますが、
+ときに、テストからのカスタムの情報を `Reporter` に渡したくなるかもしれません。
+この目的で、`info` 引数なしメソッド経由で情報を現在の `Reporter` に送信する
+[Informer](http://doc.scalatest.org/2.2.4/org/scalatest/Informer.html) が提供されます。
+追加の情報を `Informer` の `apply` メソッド経由で渡すことができます。
+その後 `Informer` は `Reporter` に 
+[InfoProvided](http://doc.scalatest.org/2.2.4/org/scalatest/events/InfoProvided.html) 
+イベント経由で情報を渡します。
+
 <p>
 One use case for the <code>Informer</code> is to pass more information about a specification to the reporter. For example,
 the <a href="GivenWhenThen.html"><code>GivenWhenThen</code></a> trait provides methods that use the implicit <code>info</code> provided by <code>FlatSpec</code>
 to pass such information to the reporter.  Here's an example:
 </p>
+
+`Informer` を使うユースケースの１つは、reporter に仕様(specification)に関する追加の情報を渡すことです。
+以下に例示したように、 [GivenWhenThen](http://doc.scalatest.org/2.2.4/org/scalatest/GivenWhenThen.html) 
+トレイトはこのような追加の情報を reporter に渡すために使ういくつかのメソッドを提供しています。
+(それは裏で `FlatSpec` によって提供される `info` メソッドを呼んでいます。)
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec.info
@@ -445,6 +467,8 @@ class SetSpec extends FlatSpec with GivenWhenThen {
 If you run this <code>FlatSpec</code> from the interpreter, you will see the following output:
 </p>
 
+この `FlatSpec` をインタプリタで実行すると、出力は次のようになります:
+
 <pre class="stREPL">
 scala&gt; new SetSpec execute
 <span class="stGreen">SetSpec:
@@ -459,12 +483,16 @@ A mutable Set
 
 <a name="documenters"></a><h2>Documenters</h2>
 
+## Documenters
+
 <p>
 <code>FlatSpec</code> also provides a <code>markup</code> method that returns a <a href="Documenter.html"><code>Documenter</code></a>, which allows you to send
 to the <code>Reporter</code> text formatted in <a href="http://daringfireball.net/projects/markdown/" target="_blank">Markdown syntax</a>.
 You can pass the extra information to the <code>Documenter</code> via its <code>apply</code> method.
 The <code>Documenter</code> will then pass the information to the <code>Reporter</code> via an <a href="events/MarkupProvided.html"><code>MarkupProvided</code></a> event.
 </p>
+
+
 
 <p>
 Here's an example <code>FlatSpec</code> that uses <code>markup</code>:

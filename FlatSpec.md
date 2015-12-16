@@ -31,7 +31,7 @@ but the test names must be written in a specification style: &ldquo;X should Y,&
 <strong>推奨される使用方法</strong>:
 <code>FlatSpec</code> クラスは、xUnit から BDD に移行しようとしているチームにとって、よい最初の１歩です。
 なぜなら、その構造は xUnit のようにフラットで、シンプルで取っ付き易いです。
-一方、テスト名は 'X should Y' や 'A must B' *など* 記述的な形を強制します。
+一方、テスト名は 'X should Y' や 'A must B' <em>など</em> 記述的な形を強制します。
 </td></tr></table>
 
 <p>
@@ -71,7 +71,7 @@ Note: you can use <code>must</code> or <code>can</code> as well as <code>should<
 </p>
 
 Note: `FlatSpec`では、`should` 以外にも、`must` や `can` を使うことができます。
-例えば、`it should "pop..."` の代わりに、`it mult "pop..."` や `it can "pop..."` と書くことができます。
+例えば、`it should "pop..."` の代わりに、`it must "pop..."` や `it can "pop..."` と書くことができます。
 
 <p>
 Instead of using a <code>behavior of</code> clause, you can alternatively use a shorthand syntax in which you replace
@@ -167,7 +167,7 @@ recent use of <code>behavior of</code> or the shorthand notation.
 </p>
 
 これゆえ、`FlatSpec` では、`it` が何を指しているかは、`behavior of` か簡略表記が出てくるまで、
-上方向にスキャンするだけでよいということです。
+垂直方向に視線を動かすだけでよいということです。
 
 <p>
 Because sometimes the subject could be plural, you can alternatively use <code>they</code> instead of <code>it</code>:

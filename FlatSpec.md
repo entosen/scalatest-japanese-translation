@@ -19,8 +19,8 @@ Facilitates a &ldquo;behavior-driven&rdquo; style of development (BDD), in which
 are combined with text that specifies the behavior the tests verify.
 </p>
 
-‚±‚ê‚ÍAU‚é•‘‚¢‹ì“®Œ^‚ÌŠJ”­(BDD)‚ğ—eˆÕ‚É‚µ‚Ü‚·B
-‚±‚Ìd‘g‚Ì’†‚Å‚ÍAŠeƒeƒXƒg‚ÍA‘Ã“–‚ÈU‚é•‘‚¢‚ğ‹Lq‚µ‚½ƒeƒLƒXƒg‚ÆŒ‹‡‚³‚ê‚Ü‚·B
+ã“ã‚Œã¯ã€æŒ¯ã‚‹èˆã„é§†å‹•å‹ã®é–‹ç™º(BDD)ã‚’å®¹æ˜“ã«ã—ã¾ã™ã€‚
+ã“ã®ä»•çµ„ã®ä¸­ã§ã¯ã€å„ãƒ†ã‚¹ãƒˆã¯ã€å¦¥å½“ãªæŒ¯ã‚‹èˆã„ã‚’è¨˜è¿°ã—ãŸãƒ†ã‚­ã‚¹ãƒˆã¨çµåˆã•ã‚Œã¾ã™ã€‚
 
 <table><tr><td class="usage">
 <strong>Recommended Usage</strong>:
@@ -28,11 +28,11 @@ Class <code>FlatSpec</code> is a good first step for teams wishing to move from 
 but the test names must be written in a specification style: &ldquo;X should Y,&rdquo; &ldquo;A must B,&rdquo; <em>etc.  </em>
 </td></tr></table>
 
-## „§‚³‚ê‚ég—p•û–@
+## æ¨å¥¨ã•ã‚Œã‚‹ä½¿ç”¨æ–¹æ³•
 
-`FlatSpec` ƒNƒ‰ƒX‚ÍAxUnit ‚©‚ç BDD ‚ÉˆÚs‚µ‚æ‚¤‚Æ‚µ‚Ä‚¢‚éƒ`[ƒ€‚É‚Æ‚Á‚ÄA‚æ‚¢Å‰‚Ì‚P•à‚Å‚·B
-‚È‚º‚È‚çA‚»‚Ì\‘¢‚Í xUnit ‚Ì‚æ‚¤‚Éƒtƒ‰ƒbƒg‚ÅAƒVƒ“ƒvƒ‹‚Åæ‚Á•t‚«ˆÕ‚¢‚Å‚·B
-ˆê•ûAƒeƒXƒg–¼‚Í 'X should Y' ‚â 'A must B' *‚È‚Ç* ‹Lq“I‚ÈŒ`‚ğ‹­§‚µ‚Ü‚·B
+`FlatSpec` ã‚¯ãƒ©ã‚¹ã¯ã€xUnit ã‹ã‚‰ BDD ã«ç§»è¡Œã—ã‚ˆã†ã¨ã—ã¦ã„ã‚‹ãƒãƒ¼ãƒ ã«ã¨ã£ã¦ã€ã‚ˆã„æœ€åˆã®ï¼‘æ­©ã§ã™ã€‚
+ãªãœãªã‚‰ã€ãã®æ§‹é€ ã¯ xUnit ã®ã‚ˆã†ã«ãƒ•ãƒ©ãƒƒãƒˆã§ã€ã‚·ãƒ³ãƒ—ãƒ«ã§å–ã£ä»˜ãæ˜“ã„ã§ã™ã€‚
+ä¸€æ–¹ã€ãƒ†ã‚¹ãƒˆåã¯ 'X should Y' ã‚„ 'A must B' *ãªã©* è¨˜è¿°çš„ãªå½¢ã‚’å¼·åˆ¶ã—ã¾ã™ã€‚
 
 <p>
 Trait <code>FlatSpec</code> is so named because
@@ -40,9 +40,9 @@ your specification text and tests line up flat against the left-side indentation
 Here's an example <code>FlatSpec</code>:
 </p>
 
-‹Lq‚ÌƒeƒLƒXƒg‚âƒeƒXƒg‚ÍAƒlƒXƒg•s—v‚ÅA¶‘¤‚Ì‚ ‚éƒCƒ“ƒfƒ“ƒgƒŒƒxƒ‹‚É‰ˆ‚Á‚Äˆê—ñ‚Éƒtƒ‰ƒbƒg‚É•À‚Ñ‚Ü‚·B
-‚±‚ê‚ª `FlatSpec` ‚Æ‚¢‚¤–¼‘O‚Ì—R—ˆ‚Å‚·B
-ˆÈ‰º‚É `FlatSpec` ‚Ìg—p—á‚ğ‹“‚°‚Ü‚· :
+è¨˜è¿°ã®ãƒ†ã‚­ã‚¹ãƒˆã‚„ãƒ†ã‚¹ãƒˆã¯ã€ãƒã‚¹ãƒˆä¸è¦ã§ã€å·¦å´ã®ã‚ã‚‹ã‚¤ãƒ³ãƒ‡ãƒ³ãƒˆãƒ¬ãƒ™ãƒ«ã«æ²¿ã£ã¦ä¸€åˆ—ã«ãƒ•ãƒ©ãƒƒãƒˆã«ä¸¦ã³ã¾ã™ã€‚
+ã“ã‚ŒãŒ `FlatSpec` ã¨ã„ã†åå‰ã®ç”±æ¥ã§ã™ã€‚
+ä»¥ä¸‹ã« `FlatSpec` ã®ä½¿ç”¨ä¾‹ã‚’æŒ™ã’ã¾ã™ :
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec
@@ -70,15 +70,15 @@ Note: you can use <code>must</code> or <code>can</code> as well as <code>should<
 <code>it should "pop</code>..., you could write <code>it must "pop</code>... or <code>it can "pop</code>....
 </p>
 
-Note: `FlatSpec`‚Å‚ÍA`should` ˆÈŠO‚É‚àA`must` ‚â `can` ‚ğg‚¤‚±‚Æ‚ª‚Å‚«‚Ü‚·B
-—á‚¦‚ÎA`it should "pop..."` ‚Ì‘ã‚í‚è‚ÉA`it mult "pop..."` ‚â `it can "pop..."` ‚Æ‘‚­‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+Note: `FlatSpec`ã§ã¯ã€`should` ä»¥å¤–ã«ã‚‚ã€`must` ã‚„ `can` ã‚’ä½¿ã†ã“ã¨ãŒã§ãã¾ã™ã€‚
+ä¾‹ãˆã°ã€`it should "pop..."` ã®ä»£ã‚ã‚Šã«ã€`it mult "pop..."` ã‚„ `it can "pop..."` ã¨æ›¸ãã“ã¨ãŒã§ãã¾ã™ã€‚
 
 <p>
 Instead of using a <code>behavior of</code> clause, you can alternatively use a shorthand syntax in which you replace
 the first <code>it</code> with the subject string, like this:
 </p>
 
-`behavior of` ß‚ğg‚¤‘ã‚í‚è‚ÉAŸ‚Ì‚æ‚¤‚ÉAÅ‰‚Ì `it` ‚Ì•”•ª‚É "subject •¶š—ñ"‚ğ‘‚­ŠÈ—ª•\‹L‚ğg‚¤‚±‚Æ‚ª‚Å‚«‚Ü‚·F
+`behavior of` ç¯€ã‚’ä½¿ã†ä»£ã‚ã‚Šã«ã€æ¬¡ã®ã‚ˆã†ã«ã€æœ€åˆã® `it` ã®éƒ¨åˆ†ã« "subject æ–‡å­—åˆ—"ã‚’æ›¸ãç°¡ç•¥è¡¨è¨˜ã‚’ä½¿ã†ã“ã¨ãŒã§ãã¾ã™ï¼š
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec
@@ -103,8 +103,8 @@ class SetSpec extends FlatSpec {
 Running either of the two previous three versions of <code>SetSpec</code> in the Scala interpreter would yield:
 </p>
 
-‘Oq‚Ì2‚Â‚Ì—á‚Ì `SetSpec` ‚ğ Scala ƒCƒ“ƒ^ƒvƒŠƒ^‚ÅÀs‚·‚é‚ÆA
-‚Ç‚¿‚ç‚àˆÈ‰º‚ÌŒ‹‰Ê‚ğ“¾‚Ü‚·B
+å‰è¿°ã®2ã¤ã®ä¾‹ã® `SetSpec` ã‚’ Scala ã‚¤ãƒ³ã‚¿ãƒ—ãƒªã‚¿ã§å®Ÿè¡Œã™ã‚‹ã¨ã€
+ã©ã¡ã‚‰ã‚‚ä»¥ä¸‹ã®çµæœã‚’å¾—ã¾ã™ã€‚
 
 <pre class="stREPL">
 <span class="stGreen">An empty Set
@@ -123,15 +123,15 @@ Each <code>it</code> refers to the most recently declared subject. For example, 
 a stack that contains one item:
 </p>
 
-`FlatSpec` ‚Ì’†‚Å‚ÍA‹Lq‚ÆƒeƒXƒg‚ğ‚µ‚½‚¢‚¢‚­‚Â‚©‚Ì¬‚³‚ÈU‚é•‘‚¢‚»‚ê‚¼‚ê‚É‚Â‚¢‚ÄA
-1‚Â(‚à‚µ‚­‚Í‚»‚êˆÈã‚Ì) •¶ÍŒ`®‚Ì‹Lq‚ğ‘‚«‚Ü‚·B
-‚»‚ê‚¼‚ê‚Ì‹Lq•¶Í‚Í "Subject" (‚à‚µ‚­‚Í *system under test* ‚â SUT ‚ÆŒÄ‚Î‚ê‚Ü‚·) ‚ğ‚¿‚Ü‚·B
-subject ‚ÍŠeƒeƒXƒg‚Å‹Lq‚¨‚æ‚ÑƒeƒXƒg‚ğ‚³‚ê‚éÀ‘Ì‚ğ•\‚µA‚Ü‚½A‹Lq•¶‚ÌåŒê‚Å‚à‚ ‚è‚Ü‚·B
-‚µ‚Î‚µ‚ÎA“¯‚¶ subject ‚É‘Î‚µ‚Ä•¡”‚ÌƒeƒXƒg‚ğ‘‚«‚½‚­‚È‚é‚Å‚µ‚å‚¤B
-`FlatSpec` ‚Å‚ÍASubject ‚Í `behavior of` ß‚©ŠÈ—ª•\‹L‚Åˆê“x‚¾‚¯–¼•t‚¯‚ê‚Î‚æ‚­A
-‚»‚ÌŒã‚Í `it should/must/can "do something"` ‚Ì‚æ‚¤‚É‘‚«‚Ü‚·B
-‚»‚ê‚¼‚ê‚Ì `it` ‚Í’¼‘O‚ÉéŒ¾‚³‚ê‚½ subject ‚ğw‚µ‚Ü‚·B
-—á‚¦‚ÎAˆÈ‰º‚ÌƒR[ƒh‚Ì4‚Â‚ÌƒeƒXƒg‚ÍA‘S‚Ä "A Stack (with one item)" ‚É‚Â‚¢‚Ä‚ÌƒeƒXƒg‚Æ‚¢‚¤‚±‚Æ‚Å‚·F
+`FlatSpec` ã®ä¸­ã§ã¯ã€è¨˜è¿°ã¨ãƒ†ã‚¹ãƒˆã‚’ã—ãŸã„ã„ãã¤ã‹ã®å°ã•ãªæŒ¯ã‚‹èˆã„ãã‚Œãã‚Œã«ã¤ã„ã¦ã€
+1ã¤(ã‚‚ã—ãã¯ãã‚Œä»¥ä¸Šã®) æ–‡ç« å½¢å¼ã®è¨˜è¿°ã‚’æ›¸ãã¾ã™ã€‚
+ãã‚Œãã‚Œã®è¨˜è¿°æ–‡ç« ã¯ "Subject" (ã‚‚ã—ãã¯ *system under test* ã‚„ SUT ã¨å‘¼ã°ã‚Œã¾ã™) ã‚’æŒã¡ã¾ã™ã€‚
+subject ã¯å„ãƒ†ã‚¹ãƒˆã§è¨˜è¿°ãŠã‚ˆã³ãƒ†ã‚¹ãƒˆã‚’ã•ã‚Œã‚‹å®Ÿä½“ã‚’è¡¨ã—ã€ã¾ãŸã€è¨˜è¿°æ–‡ã®ä¸»èªã§ã‚‚ã‚ã‚Šã¾ã™ã€‚
+ã—ã°ã—ã°ã€åŒã˜ subject ã«å¯¾ã—ã¦è¤‡æ•°ã®ãƒ†ã‚¹ãƒˆã‚’æ›¸ããŸããªã‚‹ã§ã—ã‚‡ã†ã€‚
+`FlatSpec` ã§ã¯ã€Subject ã¯ `behavior of` ç¯€ã‹ç°¡ç•¥è¡¨è¨˜ã§ä¸€åº¦ã ã‘åä»˜ã‘ã‚Œã°ã‚ˆãã€
+ãã®å¾Œã¯ `it should/must/can "do something"` ã®ã‚ˆã†ã«æ›¸ãã¾ã™ã€‚
+ãã‚Œãã‚Œã® `it` ã¯ç›´å‰ã«å®£è¨€ã•ã‚ŒãŸ subject ã‚’æŒ‡ã—ã¾ã™ã€‚
+ä¾‹ãˆã°ã€ä»¥ä¸‹ã®ã‚³ãƒ¼ãƒ‰ã®4ã¤ã®ãƒ†ã‚¹ãƒˆã¯ã€å…¨ã¦ "A Stack (with one item)" ã«ã¤ã„ã¦ã®ãƒ†ã‚¹ãƒˆã¨ã„ã†ã“ã¨ã§ã™ï¼š
 
 <pre class="stHighlight">
 behavior of "A Stack (with one item)"
@@ -149,7 +149,7 @@ it should "remove the top item on pop" in {}
 The same is true if the tests are written using the shorthand notation:
 </p>
 
-ƒeƒXƒg‚ªŠÈ—ª•\‹L‚Å‘‚©‚ê‚Ä‚¢‚Ä‚à“¯—l‚Å‚·F
+ãƒ†ã‚¹ãƒˆãŒç°¡ç•¥è¡¨è¨˜ã§æ›¸ã‹ã‚Œã¦ã„ã¦ã‚‚åŒæ§˜ã§ã™ï¼š
 
 <pre class="stHighlight">
 "A Stack (with one item)" should "be non-empty" in {}
@@ -166,14 +166,14 @@ In a <code>FlatSpec</code>, therefore, to figure out what "<code>it</code>" mean
 recent use of <code>behavior of</code> or the shorthand notation.
 </p>
 
-‚±‚ê‚ä‚¦A`FlatSpec` ‚Å‚ÍA`it` ‚ª‰½‚ğw‚µ‚Ä‚¢‚é‚©‚ÍA`behavior of` ‚©ŠÈ—ª•\‹L‚ªo‚Ä‚­‚é‚Ü‚ÅA
-ã•ûŒü‚ÉƒXƒLƒƒƒ“‚·‚é‚¾‚¯‚Å‚æ‚¢‚Æ‚¢‚¤‚±‚Æ‚Å‚·B
+ã“ã‚Œã‚†ãˆã€`FlatSpec` ã§ã¯ã€`it` ãŒä½•ã‚’æŒ‡ã—ã¦ã„ã‚‹ã‹ã¯ã€`behavior of` ã‹ç°¡ç•¥è¡¨è¨˜ãŒå‡ºã¦ãã‚‹ã¾ã§ã€
+ä¸Šæ–¹å‘ã«ã‚¹ã‚­ãƒ£ãƒ³ã™ã‚‹ã ã‘ã§ã‚ˆã„ã¨ã„ã†ã“ã¨ã§ã™ã€‚
 
 <p>
 Because sometimes the subject could be plural, you can alternatively use <code>they</code> instead of <code>it</code>:
 </p>
 
-ê‡‚É‚æ‚Á‚Ä‚ÍAsubject ‚ª•¡”Œ`‚É‚È‚é‚±‚Æ‚à‚ ‚é‚Ì‚ÅA`it` ‚Ì‘ã‚í‚è‚É `they` ‚ğg‚¤‚±‚Æ‚à‚Å‚«‚Ü‚·B
+å ´åˆã«ã‚ˆã£ã¦ã¯ã€subject ãŒè¤‡æ•°å½¢ã«ãªã‚‹ã“ã¨ã‚‚ã‚ã‚‹ã®ã§ã€`it` ã®ä»£ã‚ã‚Šã« `they` ã‚’ä½¿ã†ã“ã¨ã‚‚ã§ãã¾ã™ã€‚
 
 <pre class="stHighlight">
 "The combinators" should "be easy to learn" in {}
@@ -189,9 +189,9 @@ A <code>FlatSpec</code>'s lifecycle has two phases: the <em>registration</em> ph
 <code>run</code> is called on it. It then remains in ready phase for the remainder of its lifetime.
 </p>
 
-`FlatSpec`‚Ìƒ‰ƒCƒtƒTƒCƒNƒ‹‚ÍA“o˜^ƒtƒF[ƒY‚Æ€”õŠ®—¹ƒtƒF[ƒY‚Ì‚Q‚Â‚ÌƒtƒF[ƒY‚©‚ç‚È‚Á‚Ä‚¢‚Ü‚·B
-‚Ü‚¸“o˜^ƒtƒF[ƒY‚©‚çn‚Ü‚èAÅ‰‚É `run` ‚ªŒÄ‚Î‚ê‚½ƒ^ƒCƒ~ƒ“ƒO‚Å€”õŠ®—¹ƒtƒF[ƒY‚ÉˆÚs‚µ‚Ü‚·B
-‚»‚ÌŒã‚Í‚¸‚Á‚Æ€”õŠ®—¹ƒtƒF[ƒY‚Ì‚Ü‚Ü‚Å‚·B
+`FlatSpec`ã®ãƒ©ã‚¤ãƒ•ã‚µã‚¤ã‚¯ãƒ«ã¯ã€ç™»éŒ²ãƒ•ã‚§ãƒ¼ã‚ºã¨æº–å‚™å®Œäº†ãƒ•ã‚§ãƒ¼ã‚ºã®ï¼’ã¤ã®ãƒ•ã‚§ãƒ¼ã‚ºã‹ã‚‰ãªã£ã¦ã„ã¾ã™ã€‚
+ã¾ãšç™»éŒ²ãƒ•ã‚§ãƒ¼ã‚ºã‹ã‚‰å§‹ã¾ã‚Šã€æœ€åˆã« `run` ãŒå‘¼ã°ã‚ŒãŸã‚¿ã‚¤ãƒŸãƒ³ã‚°ã§æº–å‚™å®Œäº†ãƒ•ã‚§ãƒ¼ã‚ºã«ç§»è¡Œã—ã¾ã™ã€‚
+ãã®å¾Œã¯ãšã£ã¨æº–å‚™å®Œäº†ãƒ•ã‚§ãƒ¼ã‚ºã®ã¾ã¾ã§ã™ã€‚
 
 <p>
 Tests can only be registered while the <code>FlatSpec</code> is
@@ -203,28 +203,40 @@ the examples shown here. If you keep to the recommended style, you should never 
 <code>TestRegistrationClosedException</code>.
 </p>
 
-ƒeƒXƒg‚Ì“o˜^‚Í `FlatSpec` ‚ª“o˜^ƒtƒF[ƒY‚É‚¢‚éŠÔ‚µ‚©‚Å‚«‚È‚¢B
-FlatSpec‚ª€”õŠ®—¹ƒtƒF[ƒY‚É“ü‚Á‚½‚çA‚Â‚Ü‚èA`run` ‚ªŒÄ‚Î‚ê‚½Œã‚ÍA
-ƒeƒXƒg‚ğ“o˜^‚µ‚æ‚¤‚Æ‚·‚é‚Æ
+ãƒ†ã‚¹ãƒˆã®ç™»éŒ²ã¯ `FlatSpec` ãŒç™»éŒ²ãƒ•ã‚§ãƒ¼ã‚ºã«ã„ã‚‹é–“ã—ã‹ã§ãã¾ã›ã‚“ã€‚
+FlatSpecãŒæº–å‚™å®Œäº†ãƒ•ã‚§ãƒ¼ã‚ºã«å…¥ã£ãŸã‚‰ã€ã¤ã¾ã‚Šã€`run` ãŒå‘¼ã°ã‚ŒãŸå¾Œã¯ã€
+ãƒ†ã‚¹ãƒˆã‚’ç™»éŒ²ã—ã‚ˆã†ã¨ã™ã‚‹ã¨
 [`TestRegistrationClosedException`](http://doc.scalatest.org/2.2.4/org/scalatest/exceptions/TestRegistrationClosedException.html)
-‚ª”­¶‚·‚éB
-`FlatSpec` ‚ğg‚¤ã‚Å‚Ì„§‚³‚ê‚éƒXƒ^ƒCƒ‹‚ÍA
-‚±‚±‚É¦‚³‚ê‚Ä‚¢‚é—á‚Ås‚Á‚Ä‚¢‚é‚æ‚¤‚ÉA
-object constraction ‚ÌŠÔ‚ÉƒeƒXƒg‚Ì“o˜^‚ğÏ‚Ü‚¹‚Ä‚µ‚Ü‚¤‚±‚Æ‚¾B
-‚»‚¤‚·‚ê‚ÎA`TestRegistrationClosedException` ‚É‘˜‹ö‚·‚é‚±‚Æ‚Í‚È‚¢B
+ãŒç™ºç”Ÿã—ã¾ã™ã€‚
+`FlatSpec` ã‚’ä½¿ã†ä¸Šã§ã®æ¨å¥¨ã•ã‚Œã‚‹ã‚¹ã‚¿ã‚¤ãƒ«ã¯ã€
+ã“ã“ã«ç¤ºã•ã‚Œã¦ã„ã‚‹ä¾‹ã§è¡Œã£ã¦ã„ã‚‹ã‚ˆã†ã«ã€
+object constraction ã®é–“ã«ãƒ†ã‚¹ãƒˆã®ç™»éŒ²ã‚’æ¸ˆã¾ã›ã¦ã—ã¾ã†ã“ã¨ã§ã™ã€‚
+ãã†ã™ã‚Œã°ã€`TestRegistrationClosedException` ã«é­é‡ã™ã‚‹ã“ã¨ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
 
-(–ó’)
-ƒeƒXƒg‚Ì“o˜^‚Æ‚ÍA `it should "...." in { ... }` ‚Ì‚æ‚¤‚È‹Lq‚Ì‚±‚Æ‚ÅA
-‚±‚ê‚ğ‚â‚é‚Ì‚Í FlatTest ‚ğŒp³‚µ‚½ƒNƒ‰ƒX‚ÌƒRƒ“ƒXƒgƒ‰ƒNƒ^•”•ª‚ª‚¢‚¢‚æ‚Á‚Ä‚±‚ÆB
+(è¨³æ³¨)
+ãƒ†ã‚¹ãƒˆã®ç™»éŒ²ã¨ã¯ã€ `it should "...." in { ... }` ã®ã‚ˆã†ãªè¨˜è¿°ã®ã“ã¨ã§ã€
+ã“ã‚Œã‚’ã‚„ã‚‹ã®ã¯ FlatTest ã‚’ç¶™æ‰¿ã—ãŸã‚¯ãƒ©ã‚¹ã®ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿éƒ¨åˆ†ãŒã„ã„ã‚ˆã£ã¦ã“ã¨ã€‚
 
 <a name="ignoredTests"></a><h2>Ignored tests</h2></a>
 
+## ã‚ã‚‹ãƒ†ã‚¹ãƒˆã‚’ç„¡è¦–ã™ã‚‹
+
+<p>
 To support the common use case of temporarily disabling a test, with the
 good intention of resurrecting the test at a later time, <code>FlatSpec</code> provides a method
 <code>ignore</code> that can be used instead of <code>it</code> or <code>they</code> to register a test. For example, to temporarily
 disable the test with the name <code>"An empty Set should produce NoSuchElementException when head is invoked"</code>, just
 change &ldquo;<code>it</code>&rdquo; into &#8220;<code>ignore</code>,&#8221; like this:
 </p>
+
+ã‚ã‚‹ãƒ†ã‚¹ãƒˆã‚’ä¸€æ™‚çš„ã«ç„¡åŠ¹ã«ã™ã‚‹ãƒ¦ãƒ¼ã‚¹ã‚±ãƒ¼ã‚¹ã‚’ã‚µãƒãƒ¼ãƒˆã—ã€
+ã¾ãŸå¾Œã§ãã®ãƒ†ã‚¹ãƒˆã‚’å¾©æ´»ã•ã›ã‚‹ã¨ã„ã†ã‚ˆã„æ„å‘ã‚’æŒãŸã›ã‚‹ãŸã‚ã«ã€
+`FlatSpec` ã¯ã€ ãƒ†ã‚¹ãƒˆã‚’ç™»éŒ²ã™ã‚‹ã¨ãã® `it` ã‚„ `they` 
+ã®ä»£ã‚ã‚Šã«ä½¿ãˆã‚‹ `ignore` ãƒ¡ã‚½ãƒƒãƒ‰ã‚’æä¾›ã—ã¾ã™ã€‚
+ä¾‹ãˆã°ã€
+`"An empty Set should produce NoSuchElementException when head is invoked"`
+ã¨ã„ã†åå‰ã®ãƒ†ã‚¹ãƒˆã‚’ä¸€æ™‚çš„ã«ç„¡åŠ¹ã«ã™ã‚‹å ´åˆã€
+æ¬¡ã®ã‚ˆã†ã« `it` ã‚’ `ignore` ã«å¤‰ãˆã‚‹ã ã‘ã§ã™ï¼š
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec.ignore
@@ -249,6 +261,8 @@ class SetSpec extends FlatSpec {
 If you run this version of <code>SetSpec</code> with:
 </p>
 
+ã“ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã® `SetSpec` ã‚’ä»¥ä¸‹ã®ã‚ˆã†ã«ã—ã¦å®Ÿè¡Œã™ã‚‹ã¨:
+
 <pre class="stREPL">
 scala&gt; new SetSpec execute
 </pre>
@@ -256,6 +270,8 @@ scala&gt; new SetSpec execute
 <p>
 It will run only the first test and report that the second test was ignored:
 </p>
+
+1ã¤ç›®ã®ãƒ†ã‚¹ãƒˆã ã‘ãŒå®Ÿè¡Œã•ã‚Œã€2ã¤ç›®ã®ãƒ†ã‚¹ãƒˆã¯ç„¡è¦–ã•ã‚ŒãŸã¨ãƒ¬ãƒãƒ¼ãƒˆã•ã‚Œã‚‹ã§ã—ã‚‡ã†:
 
 <pre class="stREPL">
 <span class="stGreen">An empty Set</span>
@@ -269,6 +285,12 @@ the first test of each new subject. To ignore such tests, you must instead chang
 For example, to temporarily disable the test with the name <code>"An empty Set should have size 0"</code>,
 change &ldquo;<code>in</code>&rdquo; into &#8220;<code>ignore</code>&#8221; like this:
 </p>
+
+ç°¡ç•¥è¡¨è¨˜ã‚’ä½¿ã£ã¦ã„ã‚‹å ´åˆã¯ã€å„subjectã®æœ€åˆã®ãƒ†ã‚¹ãƒˆã«ã¤ã„ã¦ã¯ã€
+`ignore` ã«æ›¸ãæ›ãˆã‚‹ãŸã‚ã®`it`ãŒã‚ã‚Šã¾ã›ã‚“ã€‚
+ã“ã†ã„ã†ãƒ†ã‚¹ãƒˆã‚’ç„¡è¦–ã™ã‚‹ãŸã‚ã«ã¯ã€ `in` ã‚’ `ignore` ã«å¤‰ãˆãªã‘ã‚Œã°ã„ã‘ã¾ã›ã‚“ã€‚
+ä¾‹ãˆã°ã€ `"An empty Set should have size 0"` ã¨ã„ã†åå‰ã®ãƒ†ã‚¹ãƒˆã‚’ä¸€æ™‚çš„ã«ç„¡åŠ¹ã«ã™ã‚‹å ´åˆã«ã¯ã€
+ä»¥ä¸‹ã®æ§˜ã«ã€`in` ã‚’ `ignore` ã«å¤‰ãˆã¾ã™:
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec.ignoreafter
@@ -293,6 +315,8 @@ class SetSpec extends FlatSpec {
 If you run this version of <code>StackSpec</code> with:
 </p>
 
+ã“ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã® `SetSpec` ã‚’ä»¥ä¸‹ã®ã‚ˆã†ã«ã—ã¦å®Ÿè¡Œã™ã‚‹ã¨:
+
 <pre class="stREPL">
 scala> new SetSpec execute
 </pre>
@@ -300,6 +324,8 @@ scala> new SetSpec execute
 <p>
 It will run only the second test and report that the first test was ignored:
 </p>
+
+2ã¤ç›®ã®ãƒ†ã‚¹ãƒˆã ã‘ãŒå®Ÿè¡Œã•ã‚Œã€1ã¤ç›®ã®ãƒ†ã‚¹ãƒˆã¯ç„¡è¦–ã•ã‚ŒãŸã¨ãƒ¬ãƒãƒ¼ãƒˆã•ã‚Œã‚‹ã§ã—ã‚‡ã†:
 
 <pre class="stREPL">
 <span class="stGreen">An empty Set</span>
@@ -310,6 +336,8 @@ It will run only the second test and report that the first test was ignored:
 <p>
 If you wish to temporarily ignore an entire suite of tests, you can annotate the test class with <code>@Ignore</code>, like this:
 </p>
+
+ã‚‚ã—ã€ä¸€é€£ã®(suite of)ãƒ†ã‚¹ãƒˆã‚’ä¸€æ™‚çš„ã«ç„¡è¦–ã—ãŸã„å ´åˆã¯ã€ã‚¯ãƒ©ã‚¹ã« `@Ignore` ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ã¤ã‘ã‚‹ã“ã¨ã§ã§ãã¾ã™:
 
 <pre class="stHighlight">
 package org.scalatest.examples.flatspec.ignoreall
@@ -337,6 +365,12 @@ Thus, marking the <code>SetSpec</code> in the above example with the <code>@Igno
 in the class will be ignored. If you run the above <code>SetSpec</code> in the Scala interpreter, you'll see:
 </p>
 
+ã‚¯ãƒ©ã‚¹ã«ã‚¿ã‚°ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ã¤ã‘ãŸå ´åˆã€
+ã‚¯ãƒ©ã‚¹ã®ä¸­ã§å®šç¾©ã•ã‚Œã¦ã„ã‚‹ãƒ†ã‚¹ãƒˆãã‚Œãã‚Œã«ãƒãƒ¼ã‚¯ã‚’ã¤ã‘ãŸã“ã¨ã«ãªã‚Šã¾ã™ã€‚
+ã“ã‚Œã‚†ãˆã€ä¸Šã®ä¾‹ã§ `@Ignore` ã‚’ã¤ã‘ãŸ `SetSpec` ã§ã¯ã€
+ã‚¯ãƒ©ã‚¹ä¸­ã®ä¸¡æ–¹ãƒ†ã‚¹ãƒˆãŒç„¡è¦–ã•ã‚Œã¾ã™ã€‚
+ä¸Šè¿°ã® `SetSpec` ã‚’ Scalaã‚¤ãƒ³ã‚¿ãƒ—ãƒªã‚¿ã§å®Ÿè¡Œã™ã‚‹ã¨ã€ä»¥ä¸‹ã®ã‚ˆã†ã«ãªã‚‹ã§ã—ã‚‡ã†:
+
 <pre class="stREPL">
 scala&gt; new SetSpec execute
 <span class="stGreen">SetSpec:
@@ -351,6 +385,14 @@ will be discovered and run, and all their tests will be reported as ignored. Thi
 class visible, to encourage the developers to eventually fix and &ldquo;un-ignore&rdquo; it. If you want to
 prevent a class from being discovered at all, use the <a href="DoNotDiscover.html"><code>DoNotDiscover</code></a> annotation instead.
 </p>
+
+ãƒ†ã‚¹ãƒˆã‚¯ãƒ©ã‚¹ã‚’ç„¡è¦–(ignore)ã™ã‚‹ã‚ˆã†ã«ãƒãƒ¼ã‚¯ã™ã‚‹ã“ã¨ã¯ã€
+ScalaTestã‹ã‚‰è¦‹ã¤ã‹ã‚‰ãªã„ã‚ˆã†ã«ã™ã‚‹ã“ã¨ã¨ã¯é•ã„ã¾ã™ã€‚
+ç„¡è¦–ã‚¯ãƒ©ã‚¹ã¯è¦‹ã¤ã‘ã‚‰ã‚Œå®Ÿè¡Œã•ã‚Œã¾ã™ãŒã€ãã®ãƒ†ã‚¹ãƒˆã¯å…¨ã¦ç„¡è¦–ã¨ã—ã¦ãƒ¬ãƒãƒ¼ãƒˆã•ã‚Œã¾ã™ã€‚
+ã“ã‚Œã¯ç„¡è¦–ã‚¯ãƒ©ã‚¹ã‚’è¦‹ãˆã‚‹ã‚ˆã†ã«ã—ã¦ãŠãã€é–‹ç™ºè€…ã«ãã‚Œã‚’ä¿®æ­£ã—ç„¡è¦–ã—ãªãã¦ã‚ˆãã™ã‚‹ã‚ˆã†ã«ä¿ƒã—ã¾ã™ã€‚
+ã‚‚ã—ã€ã‚¯ãƒ©ã‚¹ãŒå®Œå…¨ã«è¦‹ã¤ã‹ã‚‰ãªã„ã‚ˆã†ã«ã™ã‚‹ã«ã¯ã€
+ä»£ã‚ã‚Šã« [`DoNotDiscover`](http://doc.scalatest.org/2.2.4/org/scalatest/DoNotDiscover.html) 
+ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ä½¿ã£ã¦ãã ã•ã„ã€‚
 
 <a name="informers"></a><h2>Informers</h2></a>
 
